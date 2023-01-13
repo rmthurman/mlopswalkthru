@@ -15,5 +15,5 @@ jobs:
       uses: azure/login@v1
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}
-
-
+    - name: run job
+      run: az ml job create --file /home/azureuser/cloudfiles/code/Users/rathur/mlopswalkthru/src/job.yml --resource-group Common-Services-West-US2 --workspace-name randysaml
